@@ -8,11 +8,7 @@ For every project, a README is needed. A README describes what the project is us
 
 Download the file, unpack the package.json, and run the code using node. When answering each question, it will take your answers and populate a README that you can copy and use in your projects!
 
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true" poster="./media/Poster.jpg">
-    <source src="./media/0.5-README-video.webm" type="video/webm">
-  </video>
-
+Check out a video here!
 
 ## Credits
 
