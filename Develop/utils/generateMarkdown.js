@@ -19,7 +19,17 @@ function generateMarkdown(data) {
 
 
 
-  ##
+  ## How to use
+  ${data.usage}
+
+  ## How to Contribute
+  ${data.contribute}
+
+  ## How to test
+  ${data.test}
+
+  ## What License do you want?
+  ${data.license}
 `;
 }
 
