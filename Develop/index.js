@@ -32,7 +32,7 @@ const questions = [
     {
         type: 'list',
         name: 'hasLicense',
-        message: 'Do you have your license?',
+        message: 'What License would you like to use?',
         choices: ['yes', 'no'],
         when: function (prevAnswers) {
             if (parseInt(prevAnswers.userAge) > 18) {
