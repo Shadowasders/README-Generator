@@ -8,7 +8,9 @@ For every project, a README is needed. A README describes what the project is us
 
 Download the file, unpack the package.json, and run the code using node. When answering each question, it will take your answers and populate a README that you can copy and use in your projects!
 
-Check out a video here!
+Check out a video here
+![0.5-README-video.webm](https://github.com/Shadowasders/README-Generator/assets/99014955/e9cd80f0-4798-445f-b667-c2c2ac406046)
+
 
 ## Credits
 
