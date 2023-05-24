@@ -1,4 +1,4 @@
-//TODO: Update licenseList with all 8 lisences, 
+//TODO: Update licenseList with all 9 lisences, 
 //update the array with their information, 
 //update the switch statement to match, 
 
@@ -9,7 +9,7 @@ const inquirer = require('inquirer')
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
-const licenseList = ["MIT", "Boost Software", "The Unlicense", "No license"];
+const licenseList = ["MIT", "Boost Software", "The Unlicense", "No license", "GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public 2.0", "Apache 2.0", ];
 const questions = [
     {
         type: 'input',

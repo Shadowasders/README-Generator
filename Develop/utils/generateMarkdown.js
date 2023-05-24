@@ -6,8 +6,8 @@ const licenseArray = [
   },
   {
     name: "The Unlicense",
-    badge: "https://img.shields.io/badge/license-MIT-green",
-    link: "https://choosealicense.com/licenses/mit/"
+    badge: "https://img.shields.io/badge/license-The%20Unlicense-green",
+    link: "https://choosealicense.com/licenses/unlicense//"
   },
   {
     name: "MIT",
@@ -42,7 +42,7 @@ const licenseArray = [
 ]
 
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Merged all 3 starter functions with one that takes the data from the object array, and creates a badge with a link to a description of the lisence. And returns nothing if one isn't chosen. 
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch (license) {
