@@ -1,8 +1,15 @@
+//TODO: Update licenseList with all 8 lisences, 
+//update the array with their information, 
+//update the switch statement to match, 
+
+
+
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
-
+const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
+const licenseList = ["MIT", "Boost Software", "The Unlicense", "No license"];
 const questions = [
     {
         type: 'input',
@@ -13,6 +20,11 @@ const questions = [
         type: 'input',
         name: 'desc',
         message: 'What is your project doing?',
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'How do you install your project?',
     },
     {
         type: 'input',
@@ -30,34 +42,35 @@ const questions = [
         message: 'How can you help test this project?',
     },
     {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email for future contact',
+    },
+    {
         type: 'list',
-        name: 'hasLicense',
+        name: 'license',
         message: 'What License would you like to use?',
-        choices: ['yes', 'no'],
-        when: function (prevAnswers) {
-            if (parseInt(prevAnswers.userAge) > 18) {
-                return true;
-            }
-            return false;
-        }
+        choices: licenseList,
     }
 ];
 
-// run your inquirere session now
-inquirer.prompt(questions)
-    .then((answersObject) => {
-        // answers.hasLicense == 'yes' ? console.log('You do have a license') : console.log('You don\'t');
-        // console.log('You do' + answers.hasLicense == 'yes' ? 'have a license' : 'not have a license');
-        // with your answersObject, pass it in to your function generateMarkdown
-        // const returnedData = generateMarkdown(answersObjet);
-        // pass returnedData to your writeToFile method now
-        // writeToFiel('README.md', returneData);
-    })
+// run your inquirer session now
+
 // TODO: Create a function to write README file; look at Node.js's native fs module
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, data) {
+    fs.writeFileSync(fileName, data)
+ }
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() {
+    inquirer.prompt(questions)
+    .then((answersObject) => {
+        // with your answersObject, pass it in to your function generateMarkdown
+        const returnedData = generateMarkdown(answersObject);
+        // pass returnedData to your writeToFile method now
+        writeToFile('README.md', returnedData);
+    })
+ }
 
 // Function call to initialize app
 init();
